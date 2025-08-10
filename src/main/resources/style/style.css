@@ -1,0 +1,101 @@
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 18, 0, 0, 6);
+}
+
+.field {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-padding: 10 12 10 12;
+    -fx-text-fill: black;
+}
+
+.field:focused {
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.20), 8, 0, 0, 0);
+}
+
+/* Placeholders (prompt text) mai discret */
+.text-input .prompt-text,
+.text-area .prompt-text {
+    -fx-fill: rgba(0,0,0,0.45);
+}
+
+/* Buton principal negru */
+.button-add {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 18 10 18;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+.button-add:hover {
+    -fx-opacity: 0.9;
+}
+.button-add:pressed {
+    -fx-opacity: 0.8;
+}
+
+/* Buton secundar conturat (alb/negru) */
+.button-back {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+.button-back:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+}
+
+/*pentru view transactions*/
+.table-view {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+}
+/* Elimină outline-ul albastru la focus */
+.table-view:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Schimbă culoarea selecției pe gri închis */
+.table-row-cell:filled:selected,
+.table-row-cell:filled:selected:hover {
+    -fx-background-color: #000000; /* gri deschis */
+    -fx-text-fill: black;          /* text negru pe fundal gri */
+}
+
+/* Culoare la hover pe un rând */
+.table-row-cell:filled:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Stilizare pentru ChoiceBox */
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
+
+
+
+
+
+

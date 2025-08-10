@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:id="background_view"
+           fx:controller="com.example.financetracker.controller.ViewTransactionsController"
+           stylesheets="@../style/style.css" prefWidth="1280" prefHeight="720">
+    <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 30 0 30 0;" >
+        <Text text="View All Transactions"
+              style="-fx-font-size: 40px; -fx-fill: black; -fx-font-weight: bold" />
+
+        <VBox styleClass="card" alignment="CENTER" spacing="40" maxWidth="800">
+            <TableView fx:id="transactionTable" prefHeight="480" maxWidth="900">
+                <columns>
+                    <TableColumn fx:id="amountColumn" text="Amount" />
+                    <TableColumn fx:id="dateColumn" text="Date"/>
+                    <TableColumn fx:id="categoryColumn" text="Category" />
+                    <TableColumn fx:id="typeColumn" text="Type" />
+                    <TableColumn fx:id="messageColumn" text="Description"/>
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER" spacing="30" >
+                <Button fx:id="backButton" text="Back to Menu" onAction="#handleBacktoMenu" prefHeight="40" styleClass="button-back"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</StackPane>

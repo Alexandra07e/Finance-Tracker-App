@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:id="background_add"
+           fx:controller="com.example.financetracker.controller.AddTransactionController"
+           stylesheets="@../style/style.css"
+           prefWidth="1280" prefHeight="720" >
+
+    <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 30 0 30 0;">
+        <Text text="Add Transaction"
+              style="-fx-font-size: 40px; -fx-fill: black; -fx-font-weight: bold" />
+
+        <VBox styleClass="card" alignment="CENTER" spacing="40" maxWidth="800">
+
+            <TextField fx:id="amountField" maxWidth="600" prefWidth="600" prefHeight="40" promptText="Amount" styleClass="field" />
+            <DatePicker fx:id="datePicker" promptText="Date" maxWidth="600" prefWidth="600" prefHeight="40" styleClass="field"/>
+            <TextArea fx:id="messageArea" promptText="Description" maxWidth="600" prefWidth="600" prefRowCount="6" styleClass="field"/>
+            <ComboBox fx:id="categoryBox" promptText="Category" maxWidth="500" prefWidth="500" prefHeight="40" styleClass="field" />
+            <ComboBox fx:id="typeBox" promptText="Transaction Type" maxWidth="500" prefWidth="500" prefHeight="40" styleClass="field" />
+
+            <HBox alignment="CENTER" spacing="30" >
+                <Button fx:id="addButton" text="Add Transaction" onAction="#handleAddTransaction" prefHeight="40" defaultButton="true" styleClass="button-add"/>
+                <Button fx:id="backButton" text="Back to Menu" onAction="#handleBacktoMenu" prefHeight="40" styleClass="button-back"/>
+            </HBox>
+        </VBox>
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:id="background_update"
+           fx:controller="com.example.financetracker.controller.ModifyTransactionController"
+           prefWidth="1280" prefHeight="720" stylesheets="@../style/style.css">
+
+    <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 30 0 30 0;">
+        <Text text="Update Transaction" style="-fx-font-size: 40px; -fx-fill: black; -fx-font-weight: bold" />
+        <VBox styleClass="card" alignment="CENTER" spacing="40" maxWidth="1000">
+            <TableView fx:id="modifyTable" prefHeight="480" maxWidth="900">
+                <columns>
+                    <TableColumn fx:id="amountColumn" text="Amount" />
+                    <TableColumn fx:id="dateColumn" text="Date" />
+                    <TableColumn fx:id="categoryColumn" text="Category" />
+                    <TableColumn fx:id="typeColumn" text="Type" />
+                    <TableColumn fx:id="messageColumn" text="Description" />
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER" spacing="30" >
+                <Button fx:id="selectTransaction" text="Select Transaction" onAction="#handleSelectTransaction" prefHeight="40" styleClass="button-add"/>
+            </HBox>
+
+            <VBox fx:id="editForm" visible="false" managed="false" spacing="20" alignment="CENTER" >
+                <TextField fx:id="amountField" promptText="Amount" maxWidth="600" prefWidth="600" prefHeight="30" styleClass="field " />
+                <DatePicker fx:id="datePicker" promptText="Date" maxWidth="600" prefWidth="600" prefHeight="40" styleClass="field " />
+                <ComboBox fx:id="categoryBox" promptText="Category" maxWidth="600" prefWidth="600" prefHeight="40" styleClass="field " />
+                <ComboBox fx:id="typeBox" promptText="Type" maxWidth="600" prefWidth="600" prefHeight="40" styleClass="field "/>
+                <TextArea fx:id="messageArea" promptText="Description" maxWidth="600" prefWidth="600" prefHeight="50"  prefRowCount="4" styleClass="field " />
+                <HBox alignment="CENTER" spacing="30"  >
+                    <Button fx:id="updateButton" text="Update" onAction="#handleUpdateTransaction" prefHeight="40" styleClass="button-add"/>
+                </HBox>
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="30"  >
+                <Button fx:id="backButton" text="Back to Menu" onAction="#handleBacktoMenu"  prefHeight="40" styleClass="button-back"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</StackPane>
+

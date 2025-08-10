@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+
+<StackPane alignment="CENTER" fx:id="menu_background"
+           fx:controller="com.example.financetracker.controller.MenuViewController"
+           xmlns:fx="http://javafx.com/fxml"
+           prefWidth="1280" prefHeight="720">
+
+    <HBox prefWidth="1280" prefHeight="720">
+        <StackPane fx:id="leftPane" alignment="CENTER" >
+            <ImageView fx:id="sideImage"
+                       fitWidth="700"
+                       fitHeight="700"
+                       preserveRatio="true"
+                       smooth="true"
+                       pickOnBounds="true"
+                       translateX="100"/>
+
+        </StackPane>
+
+        <VBox alignment="TOP_RIGHT" spacing="50" prefWidth="780" >
+            <Text fx:id="MenuText"
+                  text="Finance Tracker MENU"
+                  translateY="30"
+                  style="-fx-font-size: 48px; -fx-fill: black; -fx-font-weight: bold;" />
+
+            <Region minHeight="50"/>
+
+            <Button fx:id="addTransactionButton" text="Add Transaction" onAction="#handleAddTransaction"
+                     style="-fx-font-size: 20px; -fx-background-color: #000000; -fx-text-fill: white;"/>
+            <Button fx:id="viewTransactionsButton" text="View Transactions" onAction="#handleViewTransactions"
+                    style="-fx-font-size: 20px; -fx-background-color: #000000; -fx-text-fill: white;" />
+            <Button fx:id="deleteTransactionButton" text="Delete Transaction" onAction="#handleDeleteTransaction"
+                    style="-fx-font-size: 20px; -fx-background-color: #000000; -fx-text-fill: white"/>
+            <Button fx:id="modifyTransactionButton" text="Update Transaction" onAction="#handleModifyTransaction"
+                    style="-fx-font-size: 20px; -fx-background-color: #000000; -fx-text-fill: white"/>
+        </VBox>
+     </HBox>
+</StackPane>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Text?>
+<StackPane fx:controller="com.example.financetracker.controller.StartViewController"
+           xmlns:fx="http://javafx.com/fxml"
+           prefWidth="1280" prefHeight="720"
+           onMouseClicked="#handleScreenClick"
+           style="-fx-background-color: black;" >
+
+      <!-- Media view for video -->
+      <MediaView fx:id="mediaView" />
+
+      <!-- Welcome text -->
+      <Text fx:id="welcomeText"
+            text="WELCOME to Finance Tracker APP"
+            style="-fx-font-size: 60px; -fx-fill: black; -fx-font-weight: bold;"
+            visible="false" />
+
+      <HBox fx:id="start_background" alignment="CENTER" spacing="100">
+            <!-- Textul despre aplicație -->
+            <Text fx:id="about"
+                  translateX="-200"
+                  wrappingWidth="600"
+                  visible="false"
+                  text="💼 Finance Tracker is a personal finance management application. Designed to help users keep track of their income and expenses, the app allows you to easily add, view, and manage transactions with details such as amount, date, category, type, and notes. Whether you're managing your monthly budget or simply trying to gain better control over your spending habits, Finance Tracker is here to assist you — simple, fast, and reliable."
+                  style="-fx-font-size: 27px; -fx-fill: black; -fx-font-weight: bold;" />
+
+            <!-- Butonul de start -->
+            <Button fx:id="addStartButton"
+                    text="START"
+                    visible="false"
+                    onAction="#handleStartApplication"
+                    style="-fx-font-size: 30px; -fx-background-color: #000000; -fx-text-fill: white;" />
+      </HBox>
+
+</StackPane>

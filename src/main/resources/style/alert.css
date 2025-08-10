@@ -1,0 +1,26 @@
+/*Stilizare pentru ShowAlert!*/
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #f0f0f0;
+}
