@@ -2,7 +2,7 @@
 
 [![Language](https://img.shields.io/badge/language-Java-orange.svg)](https://en.wikipedia.org/wiki/Java_(programming_language))  
 [![Framework](https://img.shields.io/badge/framework-JavaFX-green.svg)](https://openjfx.io/)  
-📊 Modern desktop application for tracking income, expenses, and managing personal finances with an intuitive UI built in JavaFX.
+📊 Modern desktop application for tracking income, expenses, and managing personal finances with an intuitive UI built in JavaFX, using Gradle.
 
 ---
 
